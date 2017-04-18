@@ -41,7 +41,7 @@
 	                                    <a href="{{url($user->name)}}" style="text-decoration:none">	
 			                                <div style="padding-top:10px">
 			                                     <img src="/uploads/avatars/{{$user->avatar}}" style="width:30px ; height:30px ;float-left;border-radius:10%;margin-right:5px;"/> {{$user->name}}<br>
-				                                 <div style="padding-left:40px;"> {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('l j F Y') }}</div>
+				                                 <div style="padding-left:40px;"> {{ \Carbon\Carbon::parse( $post->created_at)->format('l j F Y') }}</div>
 				                                    
 								            </div>	
 			                            </a>
@@ -128,7 +128,7 @@
 	                                             <div style="padding-top:10px">
 			                                         <img src="/uploads/avatars/{{$user->avatar}}" style="width:30px ; height:30px ;float-left;border-radius:10%;margin-right:5px;"/> {{$user->name}}<br>
 				
-				                                           <div style="padding-left:40px;"> {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $postcomment->created_at)->format('l j F Y') }}</div>
+				                                           <div style="padding-left:40px;"> {{ \Carbon\Carbon::parse( $postcomment->created_at)->format('l j F Y') }}</div>
 				                                 </div>	
 		                                         <br>
                                             </div>
@@ -158,7 +158,7 @@
 	                                             <div style="padding-top:10px">
 			                                         <img src="/uploads/avatars/{{$user->avatar}}" style="width:30px ; height:30px ;float-left;border-radius:10%;margin-right:5px;"/> {{$user->name}}<br>
 				
-				                                           <div style="padding-left:40px;"> {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $postcomment->created_at)->format('l j F Y') }}</div>
+				                                           <div style="padding-left:40px;"> {{ \Carbon\Carbon::parse( $postcomment->created_at)->format('l j F Y') }}</div>
 				                                 </div>	
 		                                         <br>
                                             </div>

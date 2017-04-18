@@ -46,15 +46,18 @@ class ForumQuestionController extends Controller
      */
     public function store(Request $request)
     {
-        ForumQuestion::create ([
      
-      'title'=> $request->input('title'),
-      'tags'=> $request->input('tags'),
-      'content'=> $request->input('content'),  
-       'user_id'=> $request->input('user_id'),
-       'slug' => $this->slugCreator($request->input('title'))
-    
-      ]);
+
+       $question = new ForumQuestion;
+
+        $question->user_id = $request->user_id;
+        $question->title = $request->title;
+        $question->tags = $request->tags;
+        $question->content = $request->content;
+         $title = $request->title;
+        $question->slug =  $this->slugCreator($title);
+        $question->save();
+
        return redirect()->route('forums.index')->with('success','Question added  successfully');
     }
 
