@@ -12,7 +12,8 @@
         "unisharp/laravel-filemanager": "^1.7",
        "elasticquent/elasticquent": "dev-master",
         "laravel/socialite": "^3.0",
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "cornford/googlmapper": "2.*"
 
     },
     "require-dev": {

@@ -76,6 +76,7 @@ $(window).scroll(function() {
                         <li><a href="{{route('posts.index')}}">Blog</a></li>
 						<li><a href="{{route('projects.index')}}">Project</a></li>
 						<li><a href="{{route('forums.index')}}">Forum</a></li>
+						<li><a href="{{route('chat')}}">Chat</a></li>
                         <li><a href="{{route('aboutus')}}">About</a></li>
 						<li><a href="{{route('contactus')}}">Contact</a></li>
 					@else
@@ -84,6 +85,7 @@ $(window).scroll(function() {
                         <li><a href="{{route('posts.index')}}">Blog</a></li>
 						<li><a href="{{route('projects.index')}}">Project</a></li>
 						<li><a href="{{route('forums.index')}}">Forum</a></li>
+						<li><a href="{{route('chat')}}">Chat</a></li>
                         <li><a href="{{route('aboutus')}}">About</a></li>
 						<li><a href="{{route('contactus')}}">Contact</a></li>
 					</ul>

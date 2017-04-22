@@ -126,10 +126,10 @@ $(" ul.navig").slideToggle("slow" , function(){
 					
 							<ul>
 							
-							<h4><li>Users({{$usercount}})</li></h4>
-							<h4><li>Posts({{$postcount}})</li></h4>
-							<h4><li>Projects({{$projectcount}})</li></h4>
-							<h4><li>Discussions({{$forumcount}})</li></h4>
+							<h4><li><a href="{{route('users')}}">Users({{$usercount}})</a></li></h4>
+							<h4><li><a href="{{route('posts.index')}}">Posts({{$postcount}})</a></li></h4>
+							<h4><li><a href="{{route('projects.index')}}">Projects({{$projectcount}})</a></li></h4>
+							<h4><li><a href="{{route('forums.index')}}">Discussions({{$forumcount}})</a></li></h4>
 							<ul>
 
 						

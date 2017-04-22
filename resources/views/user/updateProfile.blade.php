@@ -22,7 +22,7 @@ $(" ul.navig").slideToggle("slow" , function(){
 <div class="panel panel-default" style="padding-left:20px">
 
 <h2>   {{ Auth::user()-> name }}'s Profile</h><br><br>
-   <img src="/uploads/avatars/{{Auth::user()->avatar}}" style="width:150px ; height:150px ;float-left;border-radius:50%;margin-right:25px;"/>
+   <img src="/uploads/avatars/{{Auth::user()->avatar}}" style="width:18%; height:25% ;float-left;border-radius:10%;margin-right:25px;"/>
    <br>
    <div style="font-size:15px;">
          <form enctype="multipart/form-data" action="/updateprofilephoto" method="POST">

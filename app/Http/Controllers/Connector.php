@@ -32,10 +32,15 @@ class Connector extends Controller
         'usercount'=>$usercount,'postcount'=>$postcount,'projectcount'=>$projectcount,'forumcount'=>$forumcount,]);
     }
 
+     public function Chat()
+    {
+        return view('chat');
+    }
      public function Login()
     {
         return view('auth.login');
     }
+
         public function Register()
     {
         return view('auth.register');

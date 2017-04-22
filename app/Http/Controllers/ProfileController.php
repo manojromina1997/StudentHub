@@ -12,11 +12,22 @@ use Illuminate\Support\Facades\DB;
 class ProfileController extends Controller
 {
   
+
+
    //Profile Page will be  Return
    public function getProfile(Request $request)
     {
      return view('user.profile');
     }
+
+//users 
+ public function displayUsers(Request $request)
+    {
+         $users = DB::table('users')->get();      
+         return view('user.displayuser',['users' => $users]);
+
+    }
+
 
     //Register USer Data will be Saved in Database 
         public function postProfile(Request $request)

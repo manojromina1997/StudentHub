@@ -58,8 +58,15 @@ Route::get('/about', [ 'as'=>'aboutus', 'uses'=>'Connector@AboutUs']);
 Route::get('/contactus', [ 'as'=>'contactus', 'uses'=>'Connector@ContactUs']);
 
 
+//contact us Page
+Route::get('/chat', [ 'as'=>'chat', 'uses'=>'Connector@Chat']);
+
+
 //Blog Page
 Route::get('/blogs', [ 'as'=>'blogs', 'uses'=>'BlogController@index']);
+
+//Users Page
+Route::get('/users', [ 'as'=>'users', 'uses'=>'ProfileController@displayUsers']);
 
 //Projects Page
 //Route::get('/projects', [ 'as'=>'projects', 'uses'=>'ProjectController@index']);

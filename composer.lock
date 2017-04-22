@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cadda5772917c03193edde06d59cfef8",
-    "content-hash": "3b1ab6b33d07e57b69fb32201a3f1492",
+    "hash": "b86ac3ef9ef8a68d0d3d65a17261eefd",
+    "content-hash": "5e3b46eb7c749199ee233ce4b1ba355d",
     "packages": [
+        {
+            "name": "cornford/googlmapper",
+            "version": "v2.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bradcornford/Googlmapper.git",
+                "reference": "4ad8ed16874143b475154a61f867af59bb1d4251"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bradcornford/Googlmapper/zipball/4ad8ed16874143b475154a61f867af59bb1d4251",
+                "reference": "4ad8ed16874143b475154a61f867af59bb1d4251",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "illuminate/view": "5.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.1",
+                "phpspec/phpspec": "2.0.*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Cornford\\Googlmapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bradley Cornford",
+                    "email": "me@bradleycornford.co.uk"
+                }
+            ],
+            "description": "An easy way to integrate Google Maps with Laravel.",
+            "keywords": [
+                "google",
+                "laravel",
+                "map",
+                "mapping",
+                "maps",
+                "streetview"
+            ],
+            "time": "2017-04-20 08:30:20"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.1.0",
@@ -569,16 +619,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.18",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc"
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d15ded55b5e690199393ea93a57edcbae20d1ffc",
-                "reference": "d15ded55b5e690199393ea93a57edcbae20d1ffc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/02444b7450350db17a7607c8a52f7268ebdb0dad",
+                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad",
                 "shasum": ""
             },
             "require": {
@@ -694,20 +744,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-10 19:27:41"
+            "time": "2017-04-16 13:33:34"
         },
         {
             "name": "laravel/socialite",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "441e0d467319044e4913b1748382d427795416e9"
+                "reference": "2771ab96004b6149d0974f8a469e08c8e54474a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/441e0d467319044e4913b1748382d427795416e9",
-                "reference": "441e0d467319044e4913b1748382d427795416e9",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/2771ab96004b6149d0974f8a469e08c8e54474a5",
+                "reference": "2771ab96004b6149d0974f8a469e08c8e54474a5",
                 "shasum": ""
             },
             "require": {
@@ -748,7 +798,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2017-03-27 19:43:19"
+            "time": "2017-04-20 16:24:07"
         },
         {
             "name": "laravelcollective/html",
@@ -2231,16 +2281,16 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "v1.7.1",
+            "version": "v1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "df97c5c7bf43eb0660f13fdc16a0efefc534311a"
+                "reference": "741622fce79df3d77b6063239e3d95566db1810e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/df97c5c7bf43eb0660f13fdc16a0efefc534311a",
-                "reference": "df97c5c7bf43eb0660f13fdc16a0efefc534311a",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/741622fce79df3d77b6063239e3d95566db1810e",
+                "reference": "741622fce79df3d77b6063239e3d95566db1810e",
                 "shasum": ""
             },
             "require": {
@@ -2257,6 +2307,9 @@
                 "ext-gd": "to use GD library based image processing.",
                 "ext-imagick": "to use Imagick based image processing."
             },
+            "bin": [
+                "bin/debug"
+            ],
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -2288,7 +2341,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2017-03-23 06:55:16"
+            "time": "2017-04-19 20:35:43"
         },
         {
             "name": "vlucas/phpdotenv",
