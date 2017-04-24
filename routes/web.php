@@ -37,6 +37,20 @@ Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 
 
+//About Page
+Route::get('/about', [ 'as'=>'aboutus', 'uses'=>'Connector@AboutUs']);
+
+
+//contact us Page
+Route::get('/contactus', [ 'as'=>'contactus', 'uses'=>'Connector@ContactUs']);
+
+
+//home page
+Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
+//Home Page
+
+Route::get('/home', [ 'as'=>'home', 'uses'=>'Connector@Index']);
+
 
 //Autheticating user for first signin before handling anything.
 Route::group( ['middleware' => 'auth' ,], function()
@@ -44,18 +58,7 @@ Route::group( ['middleware' => 'auth' ,], function()
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
 
-Route::get('/', [ 'as'=>'home', 'uses'=>'Connector@Index']);
-//Home Page
 
-Route::get('/home', [ 'as'=>'home', 'uses'=>'Connector@Index']);
-
-
-//About Page
-Route::get('/about', [ 'as'=>'aboutus', 'uses'=>'Connector@AboutUs']);
-
-
-//contact us Page
-Route::get('/contactus', [ 'as'=>'contactus', 'uses'=>'Connector@ContactUs']);
 
 
 //contact us Page

@@ -89,8 +89,7 @@ $(window).scroll(function() {
                         <li><a href="{{route('aboutus')}}">About</a></li>
 						<li><a href="{{route('contactus')}}">Contact</a></li>
 					</ul>
-					@endif
-			</div>
+						</div>
 			<div class="header-right">
 				<div class="search-bar">
 
@@ -103,6 +102,8 @@ $(window).scroll(function() {
 							</form>
 				</div>
 			</div>
+					@endif
+		
 				<div class="clearfix"></div>
 			</div>
 			</div>

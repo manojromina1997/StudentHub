@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -11,11 +12,12 @@ use Illuminate\Support\Facades\DB;
 use Image;
 use Auth;
 use App\Post;
+use App\User;
 
 
 class PostController extends Controller
 {
-    
+     use Notifiable;
      /**
      * Display a listing of the resource.
      *
@@ -62,10 +64,19 @@ class PostController extends Controller
          $post->slug =$this->slugCreator($title) ;
 
         $post->save();
-        
+
+      
+
        
         return redirect()->route('posts.index')
                         ->with('success','Post created successfully');
+  
+
+       //$users = DB::table('users')->orderby('id','desc')->first();  
+       $posts = DB::table('posts')->orderby('id','desc')->first();  
+      Notification::send(User::all(), new NewPost($posts));
+   
+       // $users->notify(new NewPost($posts));
     }
 
     public function slugCreator($title)
