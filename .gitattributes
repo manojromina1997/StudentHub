@@ -3,4 +3,4 @@
 *.scss linguist-vendored
 
 
-StudentHub/blob/master/public/plugins/tinymce/plugins/example/* linguist-vendored
+StudentHub/public/*  linguist-vendored
