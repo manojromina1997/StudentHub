@@ -126,6 +126,7 @@ class ForumQuestionController extends Controller
         $question->title = $request->title;
         $question->tags = $request->tags;
         $question->content = $request->content;
+         $title = $request->title;
         $question->slug =  $this->slugCreator($title);
 
         $question->update();
