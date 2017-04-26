@@ -26,6 +26,7 @@ class SearchController extends Controller
 /*
 //ElasticSearch
 
+
         if($request->has('search')){
     		$users_result= User::search($request->input('search'))->toArray();
     	}
@@ -40,15 +41,29 @@ class SearchController extends Controller
         ->get();
 
       $post_result = Post::where('title', 'LIKE', '%'. Input::get('search') .'%')
+        ->orWhere('tags', 'LIKE', '%'. Input::get('search') .'%')
         ->get();
 
      $project_result = Projects::where('title', 'LIKE', '%'. Input::get('search') .'%')
+         ->orWhere('tags', 'LIKE', '%'. Input::get('search') .'%')
         ->get();
 
      $forum_result = Forum::where('title', 'LIKE', '%'. Input::get('search') .'%')
+        ->orWhere('tags', 'LIKE', '%'. Input::get('search') .'%')
         ->get();
-
-
+        
+         $users = DB::table('users')->get();  
+        $usercount = $users_result ->count();
+         $postcount = $post_result ->count();
+          $projectcount = $project_result ->count();
+           $forumcount = $forum_result ->count();
+      return view('search.results',['users_result'=>$users_result,'post_result'=>$post_result,
+      'project_result'=>$project_result,'forum_result'=>$forum_result,'usercount'=>$usercount,
+      'postcount'=>$postcount,'projectcount'=>$projectcount,'forumcount'=>$forumcount,'users'=>$users
+      
+      ]);
+        
+        /*
         //echo $users_result;
         //  echo $users_result->count();
         if($users_result->count())
@@ -102,7 +117,7 @@ class SearchController extends Controller
             return redirect()->route('home')->with('error','No data Found');
         }
 
-
+        */
 
     
     }

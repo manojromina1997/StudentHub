@@ -84,14 +84,21 @@ $(" ul.navig").slideToggle("slow" , function(){
 <div class="panel-body">
      <a href="{{url('blog='.$post->slug)}} " style="text-decoration:none"><!--Blog Linking-->
 
-	      <div class="btn-group" >
-               <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" style="padding-right:20px">
+	      <div class="btn-group pull-right" >
+               <a class="btn dropdown-toggle " data-toggle="dropdown" href="#" style="padding-right:20px">
                    Action
                   <span class="caret"></span>
                </a>
-               <ul class="dropdown-menu">
-               <li>Edit</li>
-                <li>Delete</li> 
+               <ul class="dropdown-menu ">
+               <li> <a href="{{route('posts.edit',$post->id)}}">Edit</a></li>
+                <li>  <form class="" action="{{route('posts.destroy',$post->id)}}" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <input type="submit" onclick="return confirm('Are you sure to delete this data');" name="name" value="delete">
+             <!--<input type="submit" onclick="return confirm('Are you sure to delete this data');" name="name" value="delete">-->
+                 </form>
+
+            <!--  <a href="{{route('posts.destroy',$post->id)}}" >Delete</a></li>-->
                </ul>
          </div>	
 
@@ -106,8 +113,8 @@ $(" ul.navig").slideToggle("slow" , function(){
             <form class="" action="{{route('posts.destroy',$post->id)}}" method="post">
               <input type="hidden" name="_method" value="delete">
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary">Edit</a>
-              <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete this data');" name="name" value="delete">
+              <a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary  ">Edit</a>
+              <input type="submit" class="btn btn-danger " onclick="return confirm('Are you sure to delete this data');" name="name" value="delete">
          </form>
 </div>		
 				
